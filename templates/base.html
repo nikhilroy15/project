@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>techspace</title>
+</head>
+<link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'index.css' %}">
+<body>
+    <div class="header">
+        <h1>welcome to tech space</h1>
+    </div>
+    <div>
+        <a href="{% url 'index' %}">HOME</a>
+        <a href="{% url 'app1:syllabus' %}">Course</a>
+        <a href="{% url 'app1:admission' %}">Admission</a>
+        <a href="{% url 'app1:info' %}">Info</a>
+    </div>
+    <div class="c1">
+        {% block b1 %}
+        {% endblock b1 %}
+    </div>
+    <div class="footer">
+        <h1>     thanks for visting     </h1> 
+    </div>
+    <div>
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/popper.js' %}"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block b1 %}
+ <h1>
+    {{msg}}
+ </h1>
+    {% for i in dell %}
+    {{i.sname}}
+    <form action="{% url 'app1:delete' i.id%}" method="post">
+            {% csrf_token  %}
+            <input type="submit" value="DELETE">
+        </form>
+    {% endfor %}
+{% endblock b1 %}
+
+
